@@ -2,10 +2,13 @@
 <html>
 <head>
     <title>Research - Niko Sarcevic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 </head>
 <body>
+    <!-- Wrapper -->
     <div id="wrapper">
         <!-- Header -->
         <header id="header">
@@ -16,12 +19,14 @@
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="publications.html">Publications</a></li>
-                        <li><a href="projects.html">Work/Projects</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+
         <!-- Main Content -->
         <div id="main">
             <article>
@@ -30,28 +35,35 @@
                 <p>
                     I am a cosmologist focusing on intrinsic alignments of galaxies in weak lensing measurements, 
                     exploring their impact on late-time cosmology. My work involves statistical modeling, 
-                    systematics mitigation, and advancing methods for precision cosmology. 
+                    systematics mitigation, and advancing methods for precision cosmology.
                 </p>
                 <p>
-                    Currently based at Duke University, I contribute to the LSST DESC and collaborate 
-                    on research that addresses key challenges in modern astrophysics, including galaxy bias, 
-                    weak lensing, and dark energy.
-                </p>
-                <p>
-                    I am also part of the <b>NASA Roman Cosmology Project Infrastructure Team (PIT)</b>, where 
-                    I focus on cosmological inference and weak lensing analysis, further enhancing our understanding 
-                    of the universe through collaborative efforts and cutting-edge methodologies.
+                    Currently based at Duke University, I contribute to the LSST DESC and the 
+                    <b>NASA Roman Cosmology Project Infrastructure Team (PIT)</b>. I focus on cosmological inference 
+                    and weak lensing analysis.
                 </p>
                 <p>
                     My previous work includes contributions to the <b>XENON collaboration</b>, where I designed 
-                    key components of the XENONnT detector, including the electric field cage, to aid in dark matter 
-                    detection experiments.
+                    key components of the XENONnT detector, including the electric field cage.
                 </p>
                 <p>
                     Visit my <a href="publications.html">Publications</a> page to learn more about my work.
                 </p>
             </article>
         </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>&copy; <span id="current-year"></span> Niko Sarcevic</p>
+        </footer>
     </div>
+
+    <!-- Scripts -->
+    <script>
+        // Load current year in the footer
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
