@@ -4,8 +4,8 @@
     <title>Contact - Niko Sarcevic</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
 </head>
 <body>
     <div id="wrapper">
@@ -14,11 +14,11 @@
             <div id="header-content"></div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="/research">Research</a></li>
+                    <li><a href="/publications">Publications</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/teaching">Teaching</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -63,7 +63,7 @@
         });
 
         // Load the header content dynamically
-        fetch("header.html")
+        fetch("../header.html")
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
