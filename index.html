@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Adjust spacing for social links */
         .social-links {
             text-align: center;
-            margin-top: 10px; /* Reduced from 20px */
+            margin-top: 10px;
         }
 
         .social-links a {
-            margin: 0 5px; /* Adjust horizontal spacing if needed */
+            margin: 0 5px;
             color: inherit;
             text-decoration: none;
             font-size: 1.2em;
@@ -32,10 +31,8 @@
 
         <!-- Header -->
         <header id="header">
-            <div id="header-content"></div>
             <nav>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="publications.html">Publications</a></li>
                     <li><a href="projects.html">Projects</a></li>
@@ -43,7 +40,6 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
             <hr />
             <div class="social-links">
                 <a href="https://orcid.org/0000-0001-7301-6415" target="_blank"><i class="ai ai-orcid"></i> ORCID</a>
@@ -61,7 +57,7 @@
 
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; <span id="current-year"></span> Niko Sarcevic</p>
+            <p>&copy; <span id="current-year"></span> Niko Sarcevic</p>
         </footer>
     </div>
 
@@ -75,25 +71,9 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Load the current year into the footer
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("current-year").textContent = new Date().getFullYear();
         });
-
-        // Load the header content dynamically
-        fetch("pages/header.html")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById("header-content").innerHTML = data;
-            })
-            .catch(error => {
-                console.error("Error loading header content:", error);
-            });
     </script>
 </body>
 </html>
