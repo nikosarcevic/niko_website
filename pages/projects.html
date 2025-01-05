@@ -1,55 +1,82 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Projects - Niko Sarcevic</title>
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <title>Contact - Niko Sarcevic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
 </head>
 <body>
     <div id="wrapper">
         <!-- Header -->
         <header id="header">
-            <div class="content">
-                <h1>Niko Sarcevic</h1>
-                <p>Explore the projects I've contributed to.</p>
-                <nav>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <div id="header-content"></div>
+            <nav>
+                <ul>
+                    <li><a href="/research">Research</a></li>
+                    <li><a href="/publications">Publications</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/teaching">Teaching</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
 
         <!-- Main Content -->
         <div id="main">
             <article>
-                <h2 class="major">Projects</h2>
-                <p>Here are some of the exciting projects I am part of:</p>
-
-                <section>
-                    <h3>NASA Roman Cosmology Project</h3>
-                    <p>As a member of the Roman Cosmology Project Infrastructure Team (PIT), I work on cosmological inference and weak lensing analysis to enhance our understanding of dark energy and the universe's large-scale structure.</p>
-                </section>
-
-                <section>
-                    <h3>LSST DESC</h3>
-                    <p>I am actively involved in the Legacy Survey of Space and Time Dark Energy Science Collaboration, focusing on weak lensing systematics, cosmological modeling, and data analysis techniques to prepare for LSST data.</p>
-                </section>
-
-                <section>
-                    <h3>Intrinsic Alignments</h3>
-                    <p>My research in intrinsic alignments addresses their impact on weak lensing signals. I develop models and mitigation techniques to improve the accuracy of cosmological measurements.</p>
-                </section>
-
-                <section>
-                    <h3>XENON Collaboration</h3>
-                    <p>In previous work, I contributed to the XENON collaboration, where I designed the electric field cage of the XENONnT detector, advancing the search for dark matter particles.</p>
-                </section>
+                <h2 class="major">Contact</h2>
+                <p>Feel free to reach out via the form below or connect with me through social media!</p>
+                <form>
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send" class="primary" /></li>
+                    </ul>
+                </form>
             </article>
         </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>&copy; <span id="current-year"></span> Niko Sarcevic</p>
+        </footer>
     </div>
+
+    <!-- Scripts -->
+    <script>
+        // Load current year in the footer
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+        });
+
+        // Load the header content dynamically
+        fetch("../header.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById("header-content").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading header content:", error);
+            });
+    </script>
 </body>
 </html>
