@@ -39,7 +39,7 @@
 
         <!-- Header -->
         <header id="header">
-            <img class="logo" src="images/niko_profile.jpg" alt="Niko Profile Picture" />
+            <div id="header-content"></div> <!-- Dynamic Header -->
             <nav>
                 <ul>
                     <li><a href="/research">Research</a></li>
@@ -81,10 +81,25 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Update current year in footer
+        // Load the current year into the footer
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("current-year").textContent = new Date().getFullYear();
         });
+
+        // Load the header content dynamically
+        fetch("pages/header.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById("header-content").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading header content:", error);
+            });
     </script>
 </body>
 </html>
