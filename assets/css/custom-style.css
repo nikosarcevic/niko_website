@@ -41,6 +41,7 @@ header {
     z-index: -1;
 }
 
+/* Navigation Styling */
 nav ul {
     list-style: none;
     padding: 0;
@@ -52,10 +53,10 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    font-family: 'Arial', sans-serif; /* Ensure proper font */
-    font-size: 1em; /* Match font size if needed */
+    color: inherit; /* Use the same color as general text */
+    font-family: inherit; /* Inherit the font family from the body or parent */
+    font-size: inherit; /* Inherit the font size from the body or parent */
+    font-weight: inherit; /* Remove bold */
 }
 
 nav ul li a:hover {
