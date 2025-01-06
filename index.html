@@ -40,11 +40,13 @@
 			<div id="main">
 
 				<!-- About -->
-				<article id="about">
+				<!-- <article id="about">
 					<h2 class="major">About</h2>
 					<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 					<p>Welcome! I am Niko Sarcevic, a cosmologist passionate about uncovering the mysteries of the universe. Here, you can learn about my work, publications, and teaching experiences.</p>
-				</article>
+				</article>-->
+
+				<div id="about"></div>
 
 				<!-- Research -->
 				<article id="research">
@@ -112,6 +114,23 @@
 		<script src="assets/js/main.js"></script>
 		<script>
     			document.getElementById("year").textContent = new Date().getFullYear();
+		</script>
+		<script>
+			// Set the current year dynamically
+			document.getElementById("year").textContent = new Date().getFullYear();
+
+			// Load the About section dynamically
+			fetch('pages/about.html')
+				.then(response => {
+					if (!response.ok) {
+						throw new Error(`HTTP error! status: ${response.status}`);
+					}
+					return response.text();
+				})
+				.then(html => {
+					document.getElementById('about').innerHTML = html;
+				})
+				.catch(error => console.error('Error loading About section:', error));
 		</script>
 
 
