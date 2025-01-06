@@ -107,14 +107,7 @@
 		<div id="bg"></div>
 
 		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script>
-    			document.getElementById("year").textContent = new Date().getFullYear();
-		</script>
+		
 		<script>
 			// Set the current year dynamically
 			document.getElementById("year").textContent = new Date().getFullYear();
@@ -131,6 +124,15 @@
 					document.getElementById('about').innerHTML = html;
 				})
 				.catch(error => console.error('Error loading About section:', error));
+		</script>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script>
+    			document.getElementById("year").textContent = new Date().getFullYear();
 		</script>
 
 
