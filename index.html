@@ -13,22 +13,65 @@
 		<div id="wrapper">
 
 			<!-- Header -->
-			<div id="header-container"></div>
+			<header id="header">
+				<div class="logo">
+					<span class="logo" src="assets/images/niko_profile.jpg"></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Niko Sarcevic</h1>
+						<p>Welcome to my personal website. Explore my work, research, and more below.</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="pages/about.html">About</a></li>
+						<li><a href="pages/research.html">Research</a></li>
+						<li><a href="pages/publications.html">Publications</a></li>
+						<li><a href="pages/projects.html">Projects</a></li>
+						<li><a href="pages/teaching.html">Teaching</a></li>
+						<li><a href="pages/contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
 
 			<!-- Main -->
 			<div id="main">
 				<article id="about">
 					<h2 class="major">About</h2>
-					<p>Welcome to my personal website. Learn more <a href="pages/about.html">here</a>.</p>
+					<p>Learn more about me on the <a href="pages/about.html">About</a> page.</p>
 				</article>
+
+				<article id="research">
+					<h2 class="major">Research</h2>
+					<p>Discover my research work on the <a href="pages/research.html">Research</a> page.</p>
+				</article>
+
+				<article id="publications">
+					<h2 class="major">Publications</h2>
+					<p>View my publications on the <a href="pages/publications.html">Publications</a> page.</p>
+				</article>
+
+				<article id="projects">
+					<h2 class="major">Projects</h2>
+					<p>Explore my contributions to major projects on the <a href="pages/projects.html">Projects</a> page.</p>
+				</article>
+
+				<article id="teaching">
+					<h2 class="major">Teaching</h2>
+					<p>Read about my teaching activities on the <a href="pages/teaching.html">Teaching</a> page.</p>
+				</article>
+
 				<article id="contact">
 					<h2 class="major">Contact</h2>
-					<p>Reach out to me through the <a href="pages/contact.html">Contact</a> page.</p>
+					<p>If you'd like to get in touch, visit the <a href="pages/contact.html">Contact</a> page.</p>
 				</article>
 			</div>
 
 			<!-- Footer -->
-			<div id="footer-container"></div>
+			<footer id="footer">
+				<p class="copyright">&copy; <span id="year"></span> Niko Sarcevic</p>
+			</footer>
 
 		</div>
 
@@ -41,6 +84,8 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/load-header-footer.js"></script>
+		<script>
+			document.getElementById("year").textContent = new Date().getFullYear();
+		</script>
 	</body>
 </html>
