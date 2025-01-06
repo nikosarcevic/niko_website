@@ -23,12 +23,18 @@
             margin-right: 5px;
         }
 
-        .logo {
-            display: block;
-            margin: 0 auto;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
+        .vertical-line {
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            left: 50%;
+            width: 2px;
+            background-color: #ccc;
+            z-index: 0;
+        }
+
+        header {
+            position: relative;
         }
     </style>
 </head>
@@ -39,27 +45,25 @@
 
         <!-- Header -->
         <header id="header">
-    <div class="vertical-line"></div> <!-- Add Vertical Line -->
-    <img class="logo" src="images/niko_profile.jpg" alt="Niko Profile Picture" />
-    <div id="header-content"></div> <!-- Dynamic Header -->
-    <nav>
-        <ul>
-            <li><a href="/pages/research">Research</a></li>
-            <li><a href="/pages/publications">Publications</a></li>
-            <li><a href="/pages/projects">Projects</a></li>
-            <li><a href="/pages/teaching">Teaching</a></li>
-            <li><a href="/pages/contact">Contact</a></li>
-        </ul>
-    </nav>
-    <hr />
-    <div class="social-links">
-        <a href="https://orcid.org/0000-0001-7301-6415" target="_blank"><i class="ai ai-orcid"></i> ORCID</a>
-        <a href="https://inspirehep.net/authors/1706125?ui-citation-summary=true" target="_blank"><i class="ai ai-inspire"></i> Inspire HEP</a>
-        <a href="https://x.com/NikoSarcevic" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="https://www.linkedin.com/in/nikosarcevic/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/nikosarcevic" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-    </div>
-</header>
+            <div id="header-content"></div> <!-- Load Header Dynamically -->
+            <nav>
+                <ul>
+                    <li><a href="/pages/research">Research</a></li>
+                    <li><a href="/pages/publications">Publications</a></li>
+                    <li><a href="/pages/projects">Projects</a></li>
+                    <li><a href="/pages/teaching">Teaching</a></li>
+                    <li><a href="/pages/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <hr />
+            <div class="social-links">
+                <a href="https://orcid.org/0000-0001-7301-6415" target="_blank"><i class="ai ai-orcid"></i> ORCID</a>
+                <a href="https://inspirehep.net/authors/1706125?ui-citation-summary=true" target="_blank"><i class="ai ai-inspire"></i> Inspire HEP</a>
+                <a href="https://x.com/NikoSarcevic" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.linkedin.com/in/nikosarcevic/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/nikosarcevic" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </header>
 
         <!-- Main -->
         <div id="main">
@@ -89,12 +93,7 @@
 
         // Load the header content dynamically
         fetch("pages/header.html")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.text();
-            })
+            .then(response => response.text())
             .then(data => {
                 document.getElementById("header-content").innerHTML = data;
             })
