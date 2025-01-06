@@ -352,9 +352,12 @@
 				    <p>nikolina dot sarcevic at gmail dot com</p>
 				    <ul class="icons">
 				        <li>
-				            <a href="https://inspirehep.net/authors/1706125?ui-citation-summary=true" class="ai aiInspire" target="_blank">
+				            <!-- <a href="https://inspirehep.net/authors/1706125?ui-citation-summary=true" class="ai aiInspire" target="_blank">
 				                <span class="label">Inspire</span>
-				            </a>
+				            </a>  -->
+					    <a href="https://inspirehep.net/authors/1706125?ui-citation-summary=true" class="ai ai-inspire" target="_blank" aria-label="Inspire">
+						    <span class="sr-only">Inspire</span>
+					    </a>
 				        </li>
 				        <li>
 				            <a href="https://github.com/nikosarcevic" class="icon brands fa-github" target="_blank">
@@ -416,6 +419,13 @@
 		        text-align: justify; /* Justify text for paragraphs in these sections only */
 		    }
 		</style>
+
+		<style>
+		    .icons .label {
+		        display: none; /* Completely hides the label span */
+		    }
+		</style>
+
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
