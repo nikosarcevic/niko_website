@@ -113,7 +113,7 @@
 			document.getElementById("year").textContent = new Date().getFullYear();
 
 			// Load the About section dynamically
-			fetch('pages/about.html')
+			fetch('/about.html')
 				.then(response => {
 					if (!response.ok) {
 						throw new Error(`HTTP error! status: ${response.status}`);
