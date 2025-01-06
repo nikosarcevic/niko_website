@@ -45,7 +45,9 @@
 
 				<article id="about">
 				<h2 class="major">About</h2>
-				    <span class="image main"><img src="images/nebo_cliffs.png" alt="Scenic background image" /></span>
+				    <span class="image main">
+				        <img src="images/nebo_cliffs.png" alt="Scenic background image" class="banner-image" />
+				    </span>
 				    <p>
 				        I am Niko Sarcevic, a cosmologist with a deep interest in mitigating the effects of astrophysical systematics,
 					their modeling, and understanding their interplay. I am also passionate about improving coding practices in science,
@@ -164,6 +166,16 @@
 
 		<!-- BG -->
 		<div id="bg"></div> 
+
+		<style>
+		    .banner-image {
+		        width: 100%; /* Make the image take full width */
+		        height: auto; /* Maintain aspect ratio */
+		        object-fit: cover; /* Ensures the image covers the container */
+		        aspect-ratio: 3 / 1; /* Set a 3:1 banner-like aspect ratio */
+		        max-height: 300px; /* Optional: Set a maximum height for the banner */
+		    }
+		</style>
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
