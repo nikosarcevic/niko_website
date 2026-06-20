@@ -1,2 +1,12 @@
 .DS_Store
 .idea
+vendor/
+
+# Jekyll local build files
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Bundler local install
+.bundle/
+vendor/bundle/
